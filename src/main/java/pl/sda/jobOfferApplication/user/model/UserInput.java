@@ -5,20 +5,20 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.util.UUID;
 
 //@NoArgsConstructor(access = AccessLevel.PRIVATE)
 @Getter
 public class UserInput {
-    private String uuid;
+    private Long uuid;
     private String name;
     private String login;
-    private String creationDate;
+    private LocalDate creationDate;
     private String password;
 
-    public UserInput(){
-        uuid= UUID.randomUUID().toString();
-        creationDate = "now";
+    public UserInput() {
+        creationDate = LocalDate.now();
 
     }
 }

@@ -1,17 +1,27 @@
 package pl.sda.jobOfferApplication.user.model;
 
 import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@AllArgsConstructor
+
+import java.time.LocalDate;
+
+
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @Getter
 public class UserOutput {
-    private Long uuid;
+    public UserOutput(Long id, String name, String login, LocalDate creationDate) {
+        this.id = id;
+        this.name = name;
+        this.login = login;
+        this.creationDate = creationDate;
+    }
+
+    private Long id;
     private String name;
     private String login;
-    private String creationDate;
+    private LocalDate creationDate;
+
 
 }
